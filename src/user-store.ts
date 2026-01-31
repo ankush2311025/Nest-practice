@@ -8,7 +8,10 @@ interface User {
 @Injectable()
 export class UsersStore {
     private store = new Map<number, User>();
-
+    constructor(){
+        console.log("User store init")
+    }
+    
     addUser(user: User){
         this.store.set(user.id, user);
     }
